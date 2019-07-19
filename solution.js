@@ -7,28 +7,26 @@ let test2 = [[1,4],[4,5]]
 // Expected output = [[1,5]]
 
 let test3 = [[1,4],[5,6]]
-// Expected output = [[1,4]]
+// Expected output = [[1,4],[5,6]]
 
 const merge = arr => {
-  if (arr.length === 1) {
+  if (arr.length <= 1) {
     return arr;
   }
   let result = [];
-  let start = arr[0][0];
-  let end = arr[0][1];
+  let start = arr[0];
+  
   for (let i = 1; i < arr.length; i++) {
-    if (end < arr[i][0]) {
-      result.push([start, end]);
-      start = arr[i][0];
-      end = arr[i][1];
+    let current = arr[i];
+    if (start[1] >= current[0]) {
+      let merged = [start[0],current[1]];
+      start = merged;
     } else {
-      result.push([start, arr[i][1]]);
-      if (i !== arr.length-1) {
-        start = arr[i+1][0];
-        end = arr[i+1][1];
-      }
+      result.push(start);
+      start = current;
     }
   }
+  result.push(start);
   return result;
 }
 
@@ -36,3 +34,5 @@ console.log('test1');
 console.log(merge(test1));
 console.log('test2');
 console.log(merge(test2));
+console.log('test3');
+console.log(merge(test3));
