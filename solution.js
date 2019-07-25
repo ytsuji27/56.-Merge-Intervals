@@ -49,6 +49,8 @@ const merge = arr => {
   return result;
 }
 
+module.exports = { merge };
+
 console.log('test1 - expect [[1,6],[8,10],[15,18]]');
 console.log(merge(test1));
 console.log('test2 - expect [[1,5]]');

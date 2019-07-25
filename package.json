@@ -1,0 +1,22 @@
+{
+  "name": "merge-intervals",
+  "version": "1.0.0",
+  "description": "Given a collection of intervals, merge all overlapping intervals.",
+  "main": "solution.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ytsuji27/56.-Merge-Intervals.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ytsuji27/56.-Merge-Intervals/issues"
+  },
+  "homepage": "https://github.com/ytsuji27/56.-Merge-Intervals#readme",
+  "devDependencies": {
+    "mocha": "^6.2.0"
+  }
+}
