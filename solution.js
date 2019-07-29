@@ -1,20 +1,3 @@
-// Given a collection of intervals, merge all overlapping intervals.
-
-let test1 = [[1,3],[2,6],[8,10],[15,18]]
-// Expected output = [[1,6],[8,10],[15,18]]
-
-let test2 = [[1,4],[4,5]]
-// Expected output = [[1,5]]
-
-let test3 = [[1,4],[5,6]]
-// Expected output = [[1,4],[5,6]]
-
-let test4 = [[1,4],[0,4]]
-// Expected output = [[0,4]]
-
-let test5 = [[1,4],[2,3]]
-// Expected output = [[1,4]]
-
 const merge = arr => {
   if (arr.length <= 1) {
     return arr;
@@ -49,15 +32,4 @@ const merge = arr => {
   return result;
 }
 
-module.exports = { merge };
-
-console.log('test1 - expect [[1,6],[8,10],[15,18]]');
-console.log(merge(test1));
-console.log('test2 - expect [[1,5]]');
-console.log(merge(test2));
-console.log('test3 - expect [[1,4],[5,6]]');
-console.log(merge(test3));
-console.log('test4 - expect [[0,4]]');
-console.log(merge(test4));
-console.log('test5 - expect [[1,4]]');
-console.log(merge(test5));
+module.exports = { merge }
